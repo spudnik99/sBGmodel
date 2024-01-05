@@ -32,7 +32,7 @@ The package offers the following functions:
 ## Installation in R
 
 ```
-> devtools::install_github('runtastic/sBGmodel')
+> devtools::install_github('spudnik99/sBGmodel')
 ```
 
 ## Example Code
