@@ -25,7 +25,7 @@ absolute_error <- function(model, df_data=NA) {
 
   df_data_retention_rate <- input_data %>%
     dplyr::group_by(cohort) %>%
-    dplyr::mutate(actual_retention_rate = dplyr::lead(survived_customers, k = 1) / survived_customers) %>%
+    dplyr::mutate(actual_retention_rate = dplyr::lead(survived_customers, n = 1) / survived_customers) %>%
     tidyr::drop_na() 
   
   df_retention_rates <- merge.data.frame(df_data_retention_rate, predicted_retention_rate, by = 'period')  %>%
